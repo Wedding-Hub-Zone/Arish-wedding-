@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Montserrat", "Poppins", sans-serif;
+  --color-emerald-deep: #061F1A;
+  --color-emerald-forest: #092D25;
+  --color-emerald-dark: #03100D;
+  --color-gold-antique: #C7A35A;
+  --color-gold-champagne: #E4CC91;
+  --color-gold-glow: #F2E3C6;
+  --color-ivory: #F6F0E3;
+  --color-sage: #82988D;
+}
+
+/* Custom fonts for Hindi when .lang-hi is applied to html */
+.lang-hi {
+  font-family: "Noto Serif Devanagari", "Cormorant Garamond", serif !important;
+}
+
+/* Exquisite traditional title font for Hindi headings */
+.lang-hi h1, 
+.lang-hi h2, 
+.lang-hi h3,
+.lang-hi [class*="font-display"],
+.lang-hi [class*="font-serif"] {
+  font-family: "Yatra One", "Cinzel", serif !important;
+}
+
+/* Beautiful clean sans-serif for body descriptions and small text details */
+.lang-hi p,
+.lang-hi span,
+.lang-hi button,
+.lang-hi a,
+.lang-hi div,
+.lang-hi [class*="font-sans"] {
+  font-family: "Mukta", "Poppins", sans-serif !important;
+}
+
+/* Crucial: Prevent tracking/letter-spacing from breaking Devanagari's connected top bar (Shirorekha) */
+.lang-hi * {
+  letter-spacing: 0px !important;
+  word-spacing: normal !important;
+}
+
+/* Custom Utilities & Animations */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #03100D;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7A35A;
+  border-radius: 3px;
+}
+
+/* Shimmer text effect */
+.shimmer-gold {
+  background: linear-gradient(90deg, #C7A35A 25%, #E4CC91 50%, #C7A35A 75%);
+  background-size: 200% 100%;
+  animation: gold-shimmer 4s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Fine vintage borders */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #C7A35A, #E4CC91, #82988D, #E4CC91, #C7A35A) 1;
+}
+
+/* Keyframes for soft float animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 4s ease-in-out infinite;
+}
+

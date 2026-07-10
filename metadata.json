@@ -1,0 +1,6 @@
+{
+  "name": "Arish & Shaba Wedding Invitation",
+  "description": "A premium, mobile-first luxury digital wedding invitation in Emerald Noir theme with dynamic countdown, interactive scratch card, gallery, and WhatsApp RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
